@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+  
+  function calcu(){
+  
+      //get numbers from inputs
+      var number1 = document.forms["integersForm"].elements["numb1"].value;
+      var number2 = document.forms["integersForm"].elements["numb2"].value;
+      var number3 = document.forms["integersForm"].elements["numb3"].value;
+  
+      //convert string to number
+      var num1 = parseInt(number1);
+      var num2 = parseInt(number2);
+      var num3 = parseInt(number3);
+  
+      //calculations
+      var sum = num1 + num2 + num3;
+      var average = (num1 + num2 + num3 / 3).toFixed(2);
+      var product = num1 * num2 * num3;
+      var largestNumber = Math.max(num1, num2, num3);
+      var smallestNumber = Math.min(num1, num2, num3);
+  
+      //html to be returned
+      var htmlOutput = "";
+      
+  
+  if (isNaN(number1) || isNaN(number2) || isNaN(number3) || number1 === "" || number2 === "" || number3 === ""){
+      htmlOutput = "<span style=\"; padding-left: 230px;\">ERROR. Please enter only number values.</span>";
+      document.getElementById("result").innerHTML = htmlOutput;
+  } else {
+      htmlOutput = 'The sum of the submitted numbers is: ' + sum + ',' + ' and their average is: ' + average + ',' + ' and their product is: ' + product + '.' + ' The largest number is: ' + largestNumber + ', ' + 'while the smallest number is: ' + smallestNumber + '.';
+      document.getElementById("result").innerHTML = htmlOutput;
+  }
+  }
+  
+  $(document).ready(function(){
+    $("#fadeButton").click(function(){
+      $("#result").fadeTo("slow", 0.1);
+    });
+  });
+  
+  </script>
+</head>
+<body>
+  <form name="integersForm">
+    <fieldset>
+    <legend>Enter integers here:</legend>
+<label>Number 1 <input type="text" name="numb1" size="6"></label>
+<label>Number 2 <input type="text" name="numb2" size="6"></label>
+<label>Number 3 <input type="text" name="numb3" size="6"></label>
+<input type="button" value="Submit" onclick="calcu()">
+<input type="button" id="fadeButton" value="Click to Fade Results">
+    </fieldset>
+    
+</form>
+<div id="result"></div>
+<style>
+form {
+  background-color: floralwhite;
+  font-style: italic;
+}
+body {
+  background-color: rgba(255, 235, 205, 0.575);
+}
+</style>
+<footer>
+    <a href="file:///C:/Users/lynnm/Documents/CNIT%20133%20Homework%20Pages/hhw2.html">Home</a>
+  <a href="file:///C:/Users/lynnm/Documents/CNIT%20133%20Homework%20Pages/part1.html">Part 1</a>
+  <a href="file:///C:/Users/lynnm/Documents/CNIT%20133%20Homework%20Pages/part3.html">Part 3</a>
+  
+</footer>
+  </body>
+</html>
