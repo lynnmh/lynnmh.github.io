@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1 style="background-color:aqua">CNIT 133 Homework 3 - Functions</h1>
+  
+</head>
+<body>
+  <input type="button" value="Calculate Your Grade"
+        onclick="calculator()">
+
+    <hr>
+    <div id="outputDiv" style="height: 50px; width: 100%;"></div>
+  
+    <script type="text/javascript">
+
+      function calculator()
+      {
+          var grade1=parseFloat(document.getElementById('homework').value*0.25);
+          var grade2=parseFloat(document.getElementById('labs').value*0.20);
+          var grade3=parseFloat(document.getElementById('midterm').value*0.25);
+          var grade4=parseFloat(document.getElementById('finals').value*0.30);
+          var total=grade1+grade2+grade3+grade4;
+
+          var display=document.getElementById('outputDiv');
+
+          display.innerHTML='Your Final Grade Is: ' +total;
+      }
+  </script>
+  </body>
+  </body> 
+  <p>
+    <h2 style="background-color:aqua">Grade Average Calculator</h2>
+    <h3>Please Enter Your Grade For Each Section</h3>
+    <TABLE BORDER=2 CELLSPACING=2 CELLPADDING=2>
+  
+      <tr>
+        <td>Type</td>
+      
+        <td>Grade</td>
+      </tr>
+  
+      <tr>
+        <td>Homework</td>
+        
+        <td><input type="text" id="homework" min="0" max="100" value=""></td>
+      </tr>
+  
+      <tr>
+        <td>midExam</td>
+        
+        <td><input type="text" id="labs" min="0" max="100" value=""></td>
+      </tr>
+  
+      <tr>
+        <td>final</td>
+        
+        <td><input type="text" id="midterm" min="0" max="100" value=""></td>
+      </tr>
+  
+      <tr>
+        <td>participation</td>
+      
+        <td><input type="text" id="finals" min="0" max="100" value=""></td>
+      </tr>
+  
+      <br><br>
+  </p>
+  
+  
+  <hr>
+  <div id="outputDiv" style="height: 50px; width: 100%;"></div>
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+  <table>
+  <tr>
+    <td>90-100</td>
+    <td>80-89</td>
+    <td>70-79</td>
+    <td>60-69</td>
+    <td>0-59</td>
+
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>B</td>
+    <td>C</td>
+    <td>D</td>
+    <td>F</td>
+</tr>
+ </table>
+  <ul>
+    <li>part2</li>
+    <li>part3</li>
+  </ul>
+</body>
+</html>
