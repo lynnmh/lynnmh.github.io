@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="hw2 sold items and prices">
+        <title>Sales</title>
+        <h1>Homework 3 Part 2</h1>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+  <p><label for="fname">Salesperson:</label><input id="fname" title="Please make sure that the salesperson's name is spelled correctly."></p>
+        
+    </head>
+    <body>
+        
+    
+  <h1>Input the number of items sold for each item number:</h1>
+  
+    <hr>
+    <div id="outputDiv" style="height: 50px; width: 100%;"></div>
+  
+    
+  </body>
+  </body> 
+  <script>
+
+    function process(){
+    let number1, number2, number3, number4, n1, n2, n3, n4, sum;
+    number1 = document.forms["myform"].elements["num1"].value;
+    number2 = document.forms["myform"].elements["num2"].value;
+    number3 = document.forms["myform"].elements["num3"].value;
+    number4 = document.forms["myform"].elements["num4"].value;
+
+    n1 = parseInt(number1);
+    n2 = parseInt(number2); 
+    n3 = parseInt(number3);
+    n4 = parseInt(number4);
+    
+    sum = n1 + n2 + n3 + n4;
+    
+    if (sum.toString() === 'NaN' ||) document.getElementById("results").innerHTML=("Please enter valid numbers only.")
+    else {
+        document.getElementById("results").innerHTML= ("The inputted numbers were " + 
+        n1 + ", " + n2 + " " + n3 + " "+ n4"<br>The sum of the integers was " + sum + };
+    };
+    
+    function res(){
+    document.getElementById("results").innerHTML = "";
+    document.myform.num1.focus();
+    };
+
+</script>
+<form name="myform">
+    <table>
+        <tr>
+        <td>Item 1:</td>
+        <td><input type="text" name="num1" size="10"></td>
+        </tr>
+        <tr>
+        <td>Item 2:</td>
+        <td><input type="text" name="num2" size="10"></td>
+        </tr>
+        <tr>
+        <td>Item 3:</td>
+        <td><input type="text" name="num3" size="10"></td>
+        </tr>
+        <tr>
+        <td>Item 4:</td>
+        <td><input type="text" name="num3" size="10"></td>
+        </tr>
+    </table>
+    
+    <!-- display results in a div -->
+    <div id="results"></div>
+    
+    <br><br>
+    <input type="button" onclick="process(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT">
+    <input type="reset" value="RESET" onclick="res()">
+</form>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+
+
+<table style="width:100%" input="text">
+  <tr>
+    <th>Item #</th>
+    <th>Price</th>
+    <th>Number Sold</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td style="text-align:center" input="text"><textarea></textarea></td>
+    <td style="text-align:center"><textarea></textarea></td>
+    <td style="text-align:center"><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td style="text-align:center"><textarea></textarea></td>
+    <td style="text-align:center"><textarea></textarea></td>
+    <td style="text-align:center"><textarea></textarea></td>
+  </tr>
+  <tr>
+  <td>Number sold</td>
+  <td style="text-align:center"><textarea></textarea></td>
+  <td style="text-align:center"><textarea></textarea></td>
+  <td style="text-align:center"><textarea></textarea></td>
+  </tr>
+  <tr>
+  <td>Total</td>
+  <td style="text-align:center"><textarea></textarea></td>
+  <td style="text-align:center"><textarea></textarea></td>
+  <td style="text-align:center"><textarea></textarea></td>
+  </tr>
+  <tr>
+        <td>Total Amount sold:</td>
+        <td style="text-align:center"><input type="text" name="num1"></td>
+  </tr>
+  <tr>
+        <td>Total Weekly Earnings:</td>
+        <td style="text-align:center"><input type="text" name="num1"></td>
+  </tr>
+</table>
+ 
+  
+  
+  
+    </body>
+</html>
