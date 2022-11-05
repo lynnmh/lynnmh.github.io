@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="pulldown menu that can be used as navigation">
+<title>Pulldown Menu Homework5</title>
+<h1>Sites for Home Ideas</h1>
+<script>
+function goToNewPage(myForm) {
+    var myDestination = myForm.destinationList.options[myForm.destinationList.selectedIndex].value;
+    window.location = myDestination;
+}
+</script>
+
+<style>
+body { width:500px;
+       margin: 0px auto; padding: 15px;
+       text-align: left; /* Counteract to IE/Win Hack */	
+       background-color: lightseagreen;
+      }    
+</style>
+
+</head>
+
+<body>
+    <img src="https://www.thespruce.com/thmb/eqNQmujmBQy-c6m7xsflWl98wOo=/1336x0/filters:no_upscale():max_bytes(150000):strip_icc()/ScreenShot2021-02-23at12.52.17PM-7cf0eccd9eeb494491685e55efd7c68f.jpg" alt="building a home" style="width: 100; height: 200px;" class="center">    
+        
+<form>
+<h3>Home Decore Stores</h3>
+<select name="destinationList" onChange="goToNewPage(this.form);">
+<option>Home Decore Stores:</option>
+<option value="https://www.homedepot.com/b/Home-Decorators-Collection/N-5yc1vZ4vr?irgwc=1&cm_mmc=afl-ir-2003851-1420157-bing&clickid=yLgQJz1R1xyNUywUi0V5PTsNUkDXPyRRRV-YUk0">Home Decorators Collection</option>
+<option value="https://www.athome.com/home-decor/?utm_source=rakuten&utm_medium=affiliate&utm_campaign=FY23_NC&utm_term=All_Markets&utm_content=ecomm&ranMID=47781&ranEAID=Gl6mUn9YQ68&ranSiteID=Gl6mUn9YQ68-VW1n7jRDDb_Vm1agRHyu6Q">At Home</option>
+<option value="https://www.chairish.com/city/san-francisco?sort=-value_score&msclkid=0031e6f9613e1b76b17d859c1bebe930">Chairish</option>
+<option value="https://www.flooranddecor.com/decoratives?gclid=b56a6fb6648c15ba04340cd31e59e4a0&gclsrc=3p.ds&msclkid=b56a6fb6648c15ba04340cd31e59e4a0&utm_source=bing&utm_medium=cpc&utm_campaign=DSA_Prospecting&utm_term=kitchen&utm_content=Kitchen%20Flooring">Floor&Decore</option>
+</select>
+</form>
+
+<br><br>
+<img src="https://saportakinsta.s3.amazonaws.com/wp-content/uploads/2020/01/Modular-341-Sunset-Ave-4.jpg" alt="building a home" style="width: 200px; height: 200px;" class="center">
+    
+
+    
+<form>
+<h3>Affordable Home Building</h3>
+<select name="destinationList">
+<option value="https://affordablecontainers.com.au/news/guide-to-build-house-from-shipping-containers/#:~:text=Building%20a%20house%20from%20shipping%20containers%20%E2%80%93%20A,Time%20to%20Approach%20...%206%20Final%20Words%20">Affordable Containers</option>
+<option value="https://www.capstonehomesaz.com/?utm_source=bing&utm_medium=luxe-bing&utm_campaign=luxe-bing">Capstone Homes</option>
+<option value="https://www.houseplans.com/blog/building-on-a-budget-affordable-home-plans-of-2020">House Planes</option>
+<option value="https://www.theplancollection.com/collections/affordable-house-plans">The Plan Collection</option>
+</select>
+<input type="button" value="Go" onClick="goToNewPage(this.form);">
+</form>
+
+</body>
+</html>
