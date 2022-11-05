@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT 133 homework 5 Arrays">
+        <title>Creating A Form. Part 1</title>
+        <h1>Coupon Subscription</h1>
+        <style>
+            h1 {
+                font-family:fantasy;
+                text-align: center;
+            }
+        </style>
+        <script>
+            <form name="custom-form" onsubmit="return validateForm()"/>
+                
+                function validateForm() {
+	let valid = true;
+	// check birthdate
+	//valid = validateBirthdate();
+	// check favorite number
+	//valid = valid ? validateFavoriteNumber() : false;
+	return valid
+                }
+        </script>
+        <script>
+            var radio_buttons = form_name.radio_name;
+var re = false;
+
+// traverse the array with radio buttons, if one is checked, make 're' true and stops
+for(var i=0; i<radio_buttons.length; i++){
+ if(radio_buttons[i] == true){
+ re = true;
+ }
+}
+
+// if 're' false, means no one radio button checked
+if(re == false) alert('Radio button not checked');
+        </script>
+           
+        
+    </head>
+    <body style="background-color:gold">
+        <h2 style="font-family:fantasy">Sign Up</h2>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="birthdate">Birthdate</label><br>
+	<input type="date" id="birthdate" name="birthdate"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <input type="submit" value="Submit">
+          </form>
+          
+          <h2 style="font-family:fantasy">Questionare</h2>
+
+<p>What is your interest:</p>
+
+<form>
+  <input type="radio" id="food" name="interest" value="FOOD">
+  <label for="food">Food</label><br>
+  <input type="radio" id="makeup" name="interest" value="MAKEUP">
+  <label for="makeup">Makeup</label><br>
+  <input type="radio" id="movies" name="interest" value="MOVIES">
+  <label for="movies">Movies</label>
+</form> 
+
+<p>What age range do you perfer to shop for?</p>
+
+<form>
+  <input type="checkbox" id="child" name="child" value="CHILD">
+  <label for="child"> 17 and under</label><br>
+  <input type="checkbox" id="youngadults" name="youngadults" value="Youngadults">
+  <label for="youngadults"> 18-30</label><br>
+  <input type="checkbox" id="adults" name="adults" value="Adults">
+  <label for="adults"> 30 and up</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+    </body>
+</html>
