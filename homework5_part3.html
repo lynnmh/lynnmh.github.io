@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="homework5 Arrays">
+        <meta charset="UTF-8">
+        <title>Creating a State Table</title>
+        <style>
+            table, th, td {
+              border:1px solid black;
+            }
+            </style>
+            <script>
+                var states = ["stateabbr", "statename", "capital", "population"];
+                console.log(states[0]);
+                console.log(states.length);
+                states[0] = "stateabbr";
+                states[1] = "statename";
+                states[2] = "capital";
+                states[3] = "population";
+                var value =states[0];
+            </script>
+    </head>
+    <h1>State Table Info</h1>
+    <body>
+        <table style="width:100%">
+            <tr>
+              <th>State Abbr</th>
+              <th>State Name</th>
+              <th>Capital</th>
+              <th>Population</th>
+            </tr>
+            <tr>
+              <td>AL</td>
+              <td>Alabama</td>
+              <td>Montgomery</td>
+              <td>4,887,871</td>
+            </tr>
+            <tr>
+              <td>AK</td>
+              <td>Alaska</td>
+              <td>Juneau</td>
+              <td>737,438</td>
+            </tr>
+            <tr>
+              <td>AZ</td>
+              <td>Arizona</td>
+              <td>Phoenix</td>
+              <td>7,171,646</td>
+            </tr>
+            <tr>
+              <td>AR</td>
+              <td>Arkansas</td>
+              <td>Little Rock</td>
+              <td>3,010,825</td>
+            </tr>
+            <tr>
+              <td>CA</td>
+              <td>California</td>
+              <td>Sacramento</td>
+              <td>39,557,045</td>
+            </tr>
+            <tr>
+              <td>CO</td>
+              <td>Colorado</td>
+              <td>Denver</td>
+              <td>5,694,564</td>
+            </tr>
+          </table>
+          
+          <form>
+            <label for="stateabbr">State Abbr:</label><br>
+            <input type="text" id="stateabbr" name="stateabbr"><br>
+            <label for="statename">State name:</label><br>
+            <input type="text" id="statename" name="statename"><br>
+            <label for="capital">Capital:</label><br>
+            <input type="text" id="capital" name="capital"><br>
+            <label for="population">Population:</label><br>
+            <input type="number" id="population" name="population"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </body>
+</html>
