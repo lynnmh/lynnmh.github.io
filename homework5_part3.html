@@ -9,15 +9,67 @@
               border:1px solid black;
             }
             </style>
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <!-- <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+            <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+            
             <script>
-                var states = ["stateabbr", "statename", "capital", "population"];
-                console.log(states[0]);
-                console.log(states.length);
-                states[0] = "stateabbr";
-                states[1] = "statename";
-                states[2] = "capital";
-                states[3] = "population";
-                var value =states[0];
+            $(function() {
+             $( "#dialog" ).dialog({
+              autoOpen: false,
+              show: {
+                effect: "blind",
+                duration: 1000
+              },
+            
+              hide: {
+                effect: "explode",
+                duration: 1000
+              }
+             });
+            
+             $( "#opener" ).click(function() {
+              $( "#dialog" ).dialog( "open" );
+             });
+            });
+            </script>
+            
+            <script>
+            var oilArray = [ ["AL", "Alabama", "Montgomery", "4,887,871"],                     
+                            ["Ak", "Alaska", "	Juneau", "737,438"],  
+                            ["AZ", "Arizona", "	Phoenix", "7,171,646"],
+                            ["AR", "Arkansas", "Little Rock", "3,010,825"]    
+                            ["CA", "California", "Sacramento", "39,557,045"]
+                            ["CO", "Colorado", "Denver", "5,694,564"] ];
+            function ButtonPressed()
+              {   
+                var searchKey = document.forms["SearchForm"].elements["inputGasVal"].value;  //get searchkey from form input box
+                searchKey = searchKey.toUpperCase();     //change search key to upper case
+                
+                var found = false;
+                for (var row = 0; row < oilArray.length; row++) //loop for 4 rows
+                 {
+                 if ((oilArray[row][0] == searchKey) || (oilArray[row][1] == searchKey))
+            
+                             //check if search key = 1st or 2nd element of each row
+                 { 
+            
+                            //if search key = 1st or 2nd element of a particular row
+                            //then place in input boxes for price and comment, that is, the 3rd and 4th elements
+            
+                   document.forms["SearchForm"].elements["price"].value = oilArray[row][2];
+                   document.forms["SearchForm"].elements["comment"].value = oilArray[row][3];  
+                   row = oilArray.length;   //ends loop if match found
+                   found = true;
+                 }
+                }
+            
+              if ( found == false ) {
+               document.forms["SearchForm"].elements["comment"].value= "Oil Company not found!"; 
+                   }
+            
+              }
             </script>
     </head>
     <h1>State Table Info</h1>
@@ -78,5 +130,13 @@
             <input type="number" id="population" name="population"><br><br>
             <input type="submit" value="Submit">
           </form>
+          <form name="SearchForm">
+            <input type="text" size="15" name="inputGasVal" autofocus> 
+            <input onclick="ButtonPressed();" type="button" value="state info" name="search" id="search">
+            <input type="text" size="6" name="price" id="price"><br><br>
+            Comment<br>
+            <input type="text" size="20" name="comment" id="comment"><br><br>
+            <input type="reset" value="Reset" onclick="location.reload();">
+            </form>  
     </body>
 </html>
