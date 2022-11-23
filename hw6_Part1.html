@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+  <meta name="description" content="Homework 6">
+<title>CNIT 133 Homework 6</title>
+</head>
+<body>
+  <h1>The following Webpage/Pages displays:</h1>
+  <dl>
+  <dt><a href="">Part 1</a></dt>
+  <dd>Contains Functions & Integers</dd>
+  <dt><a href="">Part 2</a></dt>
+  <dd>Contains a Form</dd>
+  <dt><a href="">Part 3</a></dt>
+  <dd>Input a Telephone Number</dd>
+  </dl>
+  
+  <link rel="stylesheet" href="style6.css"/>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="js6part1.js" async></script>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+let a = Math.sqrt(0);
+let b = Math.sqrt(1);
+let c = Math.sqrt(9);
+let d = Math.sqrt(64);
+let e = Math.sqrt(-9);
+let y = Math.round( x );
+y = Math.floor( x * 10 + .5 ) / 10; 
+
+
+
+y = Math.floor( x * 100 + .5 ) / 100; 
+
+var x = 12.0011;
+var r100 = Math.round(x * 100 + .5) / 100;
+var s100 = r100.toFixed(2);
+var x = 12.0;
+alert(x);
+
+
+</script>
+
+<div id="content">
+    <form id="number_form">
+        <label for="num_input">Enter a number with at least 4 decimal places:</label>
+        <input type="text" id="num_input" name="num_input"><br><br>
+        <input type="button" value="Submit" onclick="validate()">
+        <input type="button" value="Reset" onclick="window.location.reload()"><br><br>
+        <textarea id="result" name="result"></textarea>
+    </form>
+</div>
+
+
+
+
+</body>
+</html> 
