@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+  <meta name="description" content="Homework 6">
+<title>CNIT 133 Homework 6</title>
+<script>
+
+    function search()
+    {
+       var count=0;
+       
+       var key=document.getElementById("key").value.toLowerCase().charAt( 0 );
+        var key=key.toLowerCase();
+
+       var stringToSearch="Feet in the sand";
+       var stringToSearch=stringToSearch.toLowerCase(); 
+
+                   
+        for (i=0; i < stringToSearch.length; i++)
+                {
+
+               if (stringToSearch.charAt(i) == key)
+                        count++;     
+                }         
+ 
+       if ( count == 0 )
+          document.getElementById("output").value=key + " not found";
+       else
+          document.getElementById("output").value=count + 
+             " occurrence(s) of " + key + " found";
+    }
+</script>
+
+<style>
+ body {background-color: lime; color: white;}
+ .body { width: 505px; margin: 0px auto;}
+</style>
+
+</head>
+<body onload="document.getElementById('key').focus();">
+
+    <section class="body">
+            <h3>Part 2 - charAt()</h3>
+    
+          <form name="myForm">
+             
+             <p>Enter a character to search for
+                <input id="key" type="text" size="5">
+                <input type="button" value="Search" onclick="search();">
+                 <input type="reset" value="Reset" onClick="location.reload();">
+    
+             <br><br>
+             
+                 search occurrences of characters in Feet in the sand.
+                <textarea cols="30" rows="1" id="output"></textarea>
+             </p>
+          </form>
+    </section>
+  
+    <h1>The following Webpage/Pages displays:</h1>
+  <dl>
+  <dt><a href="">Part 1</a></dt>
+  <dd>Contains Functions & Integers</dd>
+  <dt><a href="">Part 2</a></dt>
+  <dd>Contains a Form</dd>
+  <dt><a href="">Part 3</a></dt>
+  <dd>Input a Telephone Number</dd>
+  </dl>
+  
+  
+
+
+
+
+</body>
+</html> 
