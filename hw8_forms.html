@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment 7</title>
+<meta charset="utf-8">
+<meta name="description" content="working with forms from float CSS to grid">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid black;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+form input {
+  margin-right: 1rem;
+  background: white;
+  border: 1px solid #9c9c9c;
+
+}
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+.myinput {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  background-color: gold;
+}
+form div { text-align:center; }
+input[type="submit"], input[type="reset"] {
+  background: lightgray;
+  padding: 0.7em;
+  border: 0;
+}
+h1 { text-align: center; font-style: italic; color: gold; }
+select:focus {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Assignment 7 - working with forms</h1>
+<form class="form1" action="#" method="post">
+    <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" maxlength="15" size="75">
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" maxlength="25" size="75">
+  <label for="age">Age</label>
+  <input type="number" type="text" id="age" name="age"  min="18" max="99" size="75">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required size="75">
+  <label for="datemax">Date of Membership:</label>
+  <input type="text" type="date" id="datemax" name="datemax" max="2020-12-31" size="75">
+  <label for="language">Choose your Rewards:</label>
+<select name="language" id="language">
+  <option value="Rewards">2-year Member Magazine subscription</option>
+  <option value="Rewards">2 Tickets to Annual Seminar</option>
+  <option value="Rewards">Voucher $100 food during seminar</option>
+  <option value="Rewards">1-day hotel stay for Seminar</option>
+</select><br><br>
+
+            <div><input type="submit" value="Submit"> &nbsp; <input type="reset" value="Clear"></div>
+        </form>
+</body>
+</html>
